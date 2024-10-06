@@ -35,6 +35,7 @@ def insert_data(event, context):
     dataset_ref = client.dataset(Config.dataset_id)
 
     raw = get_data(Config.url)
+    # list of tuples
     record = [(
         raw["time"]["updatedISO"], 
         raw["bpi"]["THB"]["rate_float"], 
